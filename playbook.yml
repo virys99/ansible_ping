@@ -1,7 +1,9 @@
 ---
-- name: Ping
+- name: test
   hosts: all
   gather_facts: no
   tasks:
-   - name: Ping1
-     ping:
+    - name: Basic usage
+      ansible.builtin.debug:
+        msg: "'{{ lookup('ansible.builtin.env', 'test') }}' is the test environment variable."
+        msg: "'{{ test }}' is the test extra variable."
