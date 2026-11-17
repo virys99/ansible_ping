@@ -8,5 +8,5 @@
       ansible.builtin.debug:
         msg:
           - "'{{ lookup('ansible.builtin.env', 'test') }}' is the test environment variable."
-         # - "'{{ test1 }}' is the test extra variable."
+          - "'{{ test1 }}' is the test extra variable."
           - "'{{ username }}' is the username variable."
